@@ -18,6 +18,7 @@ function Header() {
     <>
       <Container
         pos="fixed"
+        zIndex="sticky"
         top={4}
         left={4}
         right={4}

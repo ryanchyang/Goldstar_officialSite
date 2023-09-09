@@ -1,14 +1,15 @@
 'use client'
 
 import { HStack } from '@chakra-ui/react'
-import { usePathname } from 'next/navigation'
+import { useParams, usePathname } from 'next/navigation'
 
 import { navlist } from '@/const/header'
 import { Link } from '@/theme/chakra'
 
 function NavList() {
   const currentRoute = usePathname()
-  console.log({ currentRoute })
+  const params = useParams()
+  console.log({ currentRoute, params })
   return (
     <>
       <HStack spacing="10">

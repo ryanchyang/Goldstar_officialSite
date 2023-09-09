@@ -25,6 +25,7 @@ export {
   SimpleGrid,
   Spacer,
   Text,
+  VStack,
 } from '@chakra-ui/react'
 
 import { Link as ChakraLink, LinkProps } from '@chakra-ui/react'

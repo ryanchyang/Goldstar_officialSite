@@ -7,48 +7,40 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
-// import { PiStarFourBold } from 'react-icons/pi'
+import { PiStarFourBold } from 'react-icons/pi'
 import type { Swiper as SwiperType } from 'swiper'
 import { Autoplay, EffectFade } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import { heroList } from '@/const/home'
-import {
-  Box,
-  Button,
-  Heading,
-  // List,
-  // ListIcon,
-  // ListItem,
-  // SimpleGrid,
-  Text,
-  VStack,
-} from '@/theme/chakra'
+import { hiltonImgList } from '@/const/home'
+import { Box, Button, Heading, VStack } from '@/theme/chakra'
 
 import styles from './Hero.module.css'
 
-function Hero() {
+function Gallery() {
   const [swiper, setSwiper] = useState<SwiperType | null>(null)
   const t = useTranslations('Index')
 
   const prevto = () => {
     if (!swiper) return
-    if (swiper.activeIndex === 0) return swiper.slideTo(heroList.length - 1)
+    if (swiper.activeIndex === 0)
+      return swiper.slideTo(hiltonImgList.length - 1)
     return swiper.slidePrev()
   }
   const nexto = () => {
     if (!swiper) return
-    if (swiper.activeIndex === heroList.length - 1) return swiper.slideTo(0)
+    if (swiper.activeIndex === hiltonImgList.length - 1)
+      return swiper.slideTo(0)
     return swiper.slideNext()
   }
 
   return (
-    <Box>
+    <Box pb={'150px'}>
       <Swiper
         spaceBetween={30}
         centeredSlides
         autoplay={{
-          delay: 5000,
+          delay: 7000,
           disableOnInteraction: false,
         }}
         effect="fade"
@@ -57,64 +49,39 @@ function Hero() {
         modules={[EffectFade, Autoplay]}
         // onAutoplayTimeLeft={onAutoplayTimeLeft}
         // onActiveIndexChange={onActiveIndexChange}
-        className={styles.swiper}
+        className={styles.gallery}
         onSwiper={(s: SwiperType): void => {
           setSwiper(s)
         }}
       >
-        {heroList.map(item => {
+        {hiltonImgList.map(item => {
           return (
-            <SwiperSlide key={item.id}>
-              <Box
-                pos="absolute"
-                zIndex={3}
-                w="full"
-                height="full"
-                background="linear-gradient(0deg, rgba(10, 49, 97, 0.50) 0%, rgba(10, 49, 97, 0.50) 100%)"
-              ></Box>
+            <SwiperSlide key={item.id} className={styles['gallery-slide']}>
               <Image
                 src={item.imgUrl}
                 alt=""
                 fill
                 style={{
-                  objectFit: 'cover', // cover, contain, none
+                  objectFit: 'contain', // cover, contain, none
                 }}
-                priority={item.id === 'hero-1' ? true : false}
               />
               <VStack
                 pos="absolute"
                 zIndex={3}
-                top={'50%'}
-                left={'50%'}
-                transform={'translate(-50%,-50%)'}
+                bottom={'0%'}
+                right={'30px'}
+                transform={'translate(0%,0%)'}
                 color="white"
                 textAlign="center"
                 spacing={{ base: 10, lg: 3 }}
-                w={'full'}
-                maxW={1200}
                 px={4}
               >
                 <Heading
                   fontSize={{ base: '5xl', lg: '7xl' }}
-                  fontWeight="bold"
+                  fontWeight="medium"
                 >
                   {t(item.title)}
                 </Heading>
-                <Text fontSize={{ base: 'xl', lg: '3xl' }}>{t(item.desc)}</Text>
-                {/* <List spacing={3} textAlign="start" pt={12} w="100%" maxW={900}>
-                  <SimpleGrid columns={2} gap={4}>
-                    {item.list.map(li => (
-                      <ListItem
-                        key={li}
-                        fontFamily="heading"
-                        fontSize={{ base: 'sm', lg: 'md' }}
-                      >
-                        <ListIcon as={PiStarFourBold} color="brand.gold" />
-                        {t(li)}
-                      </ListItem>
-                    ))}
-                  </SimpleGrid>
-                </List> */}
               </VStack>
             </SwiperSlide>
           )
@@ -158,4 +125,4 @@ function Hero() {
   )
 }
 
-export default Hero
+export default Gallery

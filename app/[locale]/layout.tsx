@@ -1,4 +1,4 @@
-// import './globals.css'
+import '../globals.css'
 
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
 
 import Header from '@/components/Header'
+import { Box } from '@/theme/chakra'
 
 import { Providers } from './providers'
 const inter = Inter({ subsets: ['latin'] })
@@ -37,10 +38,10 @@ export default async function RootLayout({
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
-            <>
+            <Box minW={300}>
               <Header />
               {children}
-            </>
+            </Box>
           </Providers>
         </NextIntlClientProvider>
       </body>

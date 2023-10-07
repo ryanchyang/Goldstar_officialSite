@@ -14,10 +14,16 @@ const Button = defineStyleConfig({
   },
   // Styles for the visual style variations
   variants: {
-    solid: {},
+    solid: {
+      color: 'white',
+      background: 'brand.blue',
+      _hover: {
+        background: 'brand.blue',
+      },
+    },
     outline: {
       _hover: {
-        background: 'rgba(0,0,0,0.08)',
+        background: 'brand.blueAlpha50',
       },
     },
   },

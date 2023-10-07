@@ -1,5 +1,7 @@
 // import Image from 'next/image'
 
+import { MdKeyboardArrowDown } from 'react-icons/md'
+
 import {
   Box,
   Button,
@@ -7,6 +9,10 @@ import {
   Flex,
   HStack,
   Image,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
   Spacer,
   Text,
 } from '@/theme/chakra'
@@ -31,7 +37,7 @@ function Header() {
         py={{ base: 3, md: 5 }}
         boxShadow={`0px 5px 12px 4px rgba(0, 0, 0, 0.09), 0px 3px 6px 0px rgba(0, 0, 0, 0.12), 0px 1px 2px -2px rgba(0, 0, 0, 0.16);`}
       >
-        <Flex justify="space-between">
+        <Flex justify="space-between" align="center">
           <HStack spacing="3">
             <Box w={{ base: '6', md: '10' }}>
               <Image src={'/images/common/logo.png'} alt="logo" />
@@ -48,7 +54,20 @@ function Header() {
           <Box hideFrom="md" as="button" w={{ base: '6', md: '10' }}>
             <Image src={'/images/common/menu.png'} alt="menu" />
           </Box>
-          <Box hideBelow="md">
+          <Flex hideBelow="md" gap={2} align="center">
+            <Menu>
+              <MenuButton
+                variant="ghost"
+                as={Button}
+                rightIcon={<MdKeyboardArrowDown />}
+              >
+                English
+              </MenuButton>
+              <MenuList>
+                <MenuItem>English</MenuItem>
+                <MenuItem>繁體中文</MenuItem>
+              </MenuList>
+            </Menu>
             <Button
               colorScheme="brand"
               size={{ base: 'md', lg: 'lg' }}
@@ -60,7 +79,7 @@ function Header() {
             >
               Contact us
             </Button>
-          </Box>
+          </Flex>
         </Flex>
       </Container>
     </>

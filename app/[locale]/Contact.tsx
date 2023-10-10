@@ -124,7 +124,7 @@ function Contact() {
     //   console.log(value)
     // }
     // submitData.append([inputNameById['fullName']], data.fullName)
-    await methods.submitToGoogleForms(formData)
+    await methods.submitToGoogleForms(formData as FormData)
   }
   // method
   // methods.submitToGoogleForms(data)

@@ -38,7 +38,7 @@ type CardDataType = {
   cover: string
   title: string
   desc: string
-  content: string
+  content: string | string[]
 }
 
 function LocationHorizontal() {

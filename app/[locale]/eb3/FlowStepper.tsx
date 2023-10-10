@@ -51,7 +51,7 @@ function FlowStepper(props: IStepperProp) {
               >
                 <StepTitle>
                   {t.rich(step.desc, {
-                    br: <br />,
+                    p: chunks => <p>{chunks}</p>,
                   })}
                 </StepTitle>
                 {/* <StepDescription>{step.description}</StepDescription> */}

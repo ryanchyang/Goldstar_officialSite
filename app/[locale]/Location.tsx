@@ -31,7 +31,7 @@ type CardDataType = {
   cover: string
   title: string
   desc: string
-  content: string | string[]
+  content: string[]
 }
 
 function Location() {

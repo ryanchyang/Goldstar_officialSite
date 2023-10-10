@@ -16,7 +16,18 @@ import { Box, Button } from '@/theme/chakra'
 
 ChartJS.register(ArcElement, Tooltip, Legend, ...registerables)
 
-function PieChart({ data }) {
+type ChartData = {
+  labels: string[]
+  datasets: {
+    label?: string
+    data: number[]
+    backgroundColor: string[]
+    borderColor: string[]
+    borderWidth: number
+  }[]
+}
+
+function PieChart({ data }: { data: ChartData }) {
   const t = useTranslations('Index')
 
   return (

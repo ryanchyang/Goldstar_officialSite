@@ -1,6 +1,7 @@
 'use Client'
 
 import { useTranslations } from 'next-intl'
+import { Fragment } from 'react'
 
 import {
   Box,
@@ -23,9 +24,9 @@ function FlowStepper(props: IStepperProp) {
   return (
     <Stepper index={-1} orientation="vertical" gap="3">
       {list.map((step, index) => (
-        <>
+        <Fragment key={index}>
           {step.desc && (
-            <Step key={index}>
+            <Step>
               <StepIndicator>
                 {/* <Text color="brand.blue">{index}</Text> */}
                 <StepStatus
@@ -73,7 +74,7 @@ function FlowStepper(props: IStepperProp) {
               {t(step.tag)}
             </Tag>
           )}
-        </>
+        </Fragment>
       ))}
     </Stepper>
   )

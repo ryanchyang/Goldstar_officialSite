@@ -15,7 +15,7 @@ type CardDataType = {
   cover: string
   title: string
   desc: string
-  content: string[] | string
+  content: string[]
 }
 
 type MotionModalProp = {
@@ -28,9 +28,10 @@ function MotionModal({ isOpen, close, data }: MotionModalProp) {
   const t = useTranslations('Index')
 
   useEffect(() => {
-    if (isOpen)
-      return document.querySelector('body').classList.add('motion-modal-open')
-    return document.querySelector('body').classList.remove('motion-modal-open')
+    const body = document.querySelector('body') as HTMLBodyElement
+
+    if (isOpen) return body.classList.add('motion-modal-open')
+    return body.classList.remove('motion-modal-open')
   }, [isOpen])
 
   return (

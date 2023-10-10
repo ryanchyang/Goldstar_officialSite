@@ -4,7 +4,7 @@
 import 'swiper/css'
 import 'swiper/css/free-mode'
 
-import { useBreakpoint } from '@chakra-ui/react'
+// import { useBreakpoint } from '@chakra-ui/react'
 import { motion as m } from 'framer-motion'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl'
@@ -21,7 +21,15 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 import MotionModal from '@/components/MotionModal'
 import { locationData } from '@/const/home'
-import { Box, Button, Container, Flex, SimpleGrid, Text } from '@/theme/chakra'
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  SimpleGrid,
+  Text,
+  useBreakpoint,
+} from '@/theme/chakra'
 
 // const iconsDict: { [key: string]: JSX.Element } = {
 //   great_location: <GoLocation />,
@@ -38,13 +46,13 @@ type CardDataType = {
   cover: string
   title: string
   desc: string
-  content: string | string[]
+  content: string[]
 }
 
 function LocationHorizontal() {
   const t = useTranslations('Index')
-  const breakpoint = useBreakpoint({ ssr: false })
-  console.log({ breakpoint })
+  const breakpoint = useBreakpoint({ ssr: true })
+
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
   const [selectedCard, setSelectedCard] = useState<CardDataType | null>(null)
   return (

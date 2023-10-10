@@ -74,6 +74,7 @@ export {
   Thead,
   Tr,
   UnorderedList,
+  useBreakpoint,
   useSteps,
   VStack,
 } from '@chakra-ui/react'

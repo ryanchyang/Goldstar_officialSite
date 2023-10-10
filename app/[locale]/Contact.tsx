@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import line from 'public/images/common/LINE_logo.png'
 import {
   GoogleFormProvider,
@@ -81,6 +82,8 @@ const LongAnswerInput = ({
 }
 
 function Contact() {
+  const t = useTranslations('Index')
+
   const {
     handleSubmit,
     register,
@@ -127,7 +130,7 @@ function Contact() {
   // methods.submitToGoogleForms(data)
 
   return (
-    <Container maxW={1200} pb={'150px'}>
+    <Container maxW={1200} pb={'150px'} id="contact">
       <Flex
         direction={{ base: 'column', lg: 'row' }}
         gap={{ base: 4, lg: 100 }}
@@ -136,7 +139,7 @@ function Contact() {
         <Box w={'fit-content'}>
           <Flex direction="column" gap={4}>
             <Heading fontSize={{ base: '4xl', lg: '52px' }} whiteSpace="nowrap">
-              Contact us
+              {t('contact_us')}
             </Heading>
             <HStack spacing={{ base: 4 }}>
               <Link isExternal href="https://line.me/en/">
@@ -168,7 +171,7 @@ function Contact() {
                 <GridItem colSpan={{ base: 2, sm: 1 }} h={'89px'}>
                   <FormControl isInvalid={Boolean(errors.fullName)}>
                     <FormLabel htmlFor="fullName" mb={1}>
-                      fullName
+                      {t('fullName')}
                     </FormLabel>
                     {/* <ShortAnswerInput
                       id="218046897"
@@ -186,7 +189,7 @@ function Contact() {
                     /> */}
                     <Input
                       // id="218046897"
-                      placeholder="fullName"
+                      placeholder={t('fullName')}
                       {...register('fullName', {
                         required: 'This is required',
                         minLength: {
@@ -204,7 +207,7 @@ function Contact() {
                 <GridItem colSpan={{ base: 2, sm: 1 }} h={'89px'}>
                   <FormControl isInvalid={Boolean(errors.tel)}>
                     <FormLabel htmlFor="tel" mb={1}>
-                      phone
+                      {t('phone')}
                     </FormLabel>
                     {/* <ShortAnswerInput
                       id="1632554903"
@@ -219,7 +222,7 @@ function Contact() {
                     <Input
                       type="tel"
                       // id="1632554903"
-                      placeholder="tel"
+                      placeholder={t('phone')}
                       {...register('tel', {
                         required: 'This is required',
                       })}
@@ -232,7 +235,7 @@ function Contact() {
                 <GridItem colSpan={{ base: 2, sm: 1 }} h={'89px'}>
                   <FormControl isInvalid={Boolean(errors.email)}>
                     <FormLabel htmlFor="email" mb={1}>
-                      email
+                      {t('email')}
                     </FormLabel>
                     {/* <ShortAnswerInput
                       id="1266362013"
@@ -247,7 +250,7 @@ function Contact() {
                     <Input
                       // id="1266362013"
                       type="email"
-                      placeholder="email"
+                      placeholder={t('email')}
                       {...register('email', {
                         required: 'This is required',
                       })}
@@ -260,7 +263,7 @@ function Contact() {
                 <GridItem colSpan={2}>
                   <FormControl isInvalid={Boolean(errors.message)}>
                     <FormLabel htmlFor="message" mb={1}>
-                      message
+                      {t('message')}
                     </FormLabel>
                     {/* <LongAnswerInput
                       id="1055067388"
@@ -278,7 +281,7 @@ function Contact() {
                     /> */}
                     <Textarea
                       // id="1055067388"
-                      placeholder="Here is a sample placeholder"
+                      placeholder={t('placeholder_message')}
                       {...register('message', {
                         required: 'This is required',
                         maxLength: {
@@ -304,7 +307,7 @@ function Contact() {
                 isLoading={isSubmitting}
                 type="submit"
               >
-                Submit
+                {t('submit')}
               </Button>
             </form>
           </GoogleFormProvider>

@@ -19,12 +19,12 @@ function FAQ() {
   const t = useTranslations('Faq')
 
   return (
-    <Container pos="relative" p={4} pt={'150px'} pb={'400px'} maxW={1200}>
+    <Container pos="relative" p={4} pt={'150px'} pb={'100px'} maxW={1200}>
       <Box maxW={910} mx={'auto'}>
         <Box mb={'53px'}>
           <SectText item={{ desc: 'faq_desc', title: 'faq' }} />
         </Box>
-        <Accordion defaultIndex={[0]} allowMultiple>
+        <Accordion allowMultiple>
           {faqList.map(item => (
             <AccordionItem key={item.key}>
               <h2>
@@ -39,6 +39,10 @@ function FAQ() {
                 {t.rich(item.key, {
                   p: chunks => <p>{chunks}</p>,
                   very: chunks => <i>{chunks}</i>,
+                  ol: chunks => (
+                    <ol style={{ paddingLeft: '22px' }}>{chunks}</ol>
+                  ),
+                  li: chunks => <li>{chunks}</li>,
                 })}
               </AccordionPanel>
             </AccordionItem>

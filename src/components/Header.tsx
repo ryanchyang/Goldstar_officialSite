@@ -1,5 +1,8 @@
+'use client'
+
 // import Image from 'next/image'
 
+import { useTranslations } from 'next-intl'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
 import {
@@ -9,6 +12,7 @@ import {
   Flex,
   HStack,
   Image,
+  Link,
   Menu,
   MenuButton,
   MenuItem,
@@ -18,8 +22,11 @@ import {
 } from '@/theme/chakra'
 
 import NavList from './NavList'
+import Sidebar from './Sidebar'
 
 function Header() {
+  const t = useTranslations('Index')
+
   return (
     <>
       <Container
@@ -39,23 +46,23 @@ function Header() {
       >
         <Flex justify="space-between" align="center">
           <HStack spacing="3">
-            <Box w={{ base: '6', md: '10' }}>
-              <Image src={'/images/common/logo.png'} alt="logo" />
+            <Box w={{ base: '100px', md: '163px' }}>
+              <Link href={'/'}>
+                <Image src={'/images/common/logo_full.png'} alt="logo" />
+              </Link>
             </Box>
-            <Text fontSize={{ base: 'md', md: '2xl' }} fontWeight="medium">
+            {/* <Text fontSize={{ base: 'md', md: '2xl' }} fontWeight="medium">
               Gold Star
-            </Text>
+            </Text> */}
           </HStack>
           <Spacer />
           <Box hideBelow="md">
             <NavList />
           </Box>
           <Spacer />
-          <Box hideFrom="md" as="button" w={{ base: '6', md: '10' }}>
-            <Image src={'/images/common/menu.png'} alt="menu" />
-          </Box>
+          <Sidebar />
           <Flex hideBelow="md" gap={2} align="center">
-            <Menu>
+            {/* <Menu>
               <MenuButton
                 variant="ghost"
                 as={Button}
@@ -67,7 +74,7 @@ function Header() {
                 <MenuItem>English</MenuItem>
                 <MenuItem>繁體中文</MenuItem>
               </MenuList>
-            </Menu>
+            </Menu> */}
             <Button
               colorScheme="brand"
               size={{ base: 'md', lg: 'lg' }}
@@ -77,7 +84,7 @@ function Header() {
               fontWeight={500}
               fontSize="xl"
             >
-              Contact us
+              <Link href="/#contact">{t('contact_us')}</Link>
             </Button>
           </Flex>
         </Flex>

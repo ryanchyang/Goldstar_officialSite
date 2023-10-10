@@ -8,6 +8,8 @@ import { PiStarFourBold } from 'react-icons/pi'
 import { Button } from '@/theme/chakra'
 import { Box, Flex, List, ListIcon, ListItem, Text } from '@/theme/chakra'
 
+import styles from './MotionModal.module.css'
+
 type CardDataType = {
   id: string
   cover: string
@@ -59,32 +61,37 @@ function MotionModal({ isOpen, close, data }: MotionModalProp) {
               direction="column"
               gap={{ base: 3, lg: 4 }}
               p={8}
+              pos="relative"
               maxHeight={350}
-              overflow="scroll"
+              overflow="auto"
+              className={styles['scroll-shadows']}
             >
               {/* <Box fontSize={{ base: 24, lg: 40 }}>{iconsDict[item.title]}</Box> */}
-              <Flex justify="space-between" align="center">
-                <Box
-                  as={m.div}
-                  fontSize={{ base: 'xl', lg: '3xl' }}
-                  fontWeight={{ base: 'medium' }}
-                >
-                  {t(data.title)}
-                </Box>
-              </Flex>
-              <Box>{t(data.desc)}</Box>
               <Box>
-                <List spacing={1}>
-                  {data.content.map(item => (
-                    <ListItem key={item} fontSize={{ base: 'sm', lg: 'md' }}>
-                      <ListIcon as={PiStarFourBold} color="brand.gold" />
-                      {t(item)}
-                    </ListItem>
-                  ))}
-                </List>
-                {/* <Text fontSize={{ base: 'sm', lg: 'md' }}>{t(data.desc)}</Text> */}
+                <Flex justify="space-between" align="center">
+                  <Box
+                    as={m.div}
+                    fontSize={{ base: 'xl', lg: '3xl' }}
+                    fontWeight={{ base: 'medium' }}
+                  >
+                    {t(data.title)}
+                  </Box>
+                </Flex>
+                <Box>{t(data.desc)}</Box>
+                <Box>
+                  <List spacing={1}>
+                    {data.content.map(item => (
+                      <ListItem key={item} fontSize={{ base: 'sm', lg: 'md' }}>
+                        <ListIcon as={PiStarFourBold} color="brand.gold" />
+                        {t(item)}
+                      </ListItem>
+                    ))}
+                  </List>
+                  {/* <Text fontSize={{ base: 'sm', lg: 'md' }}>{t(data.desc)}</Text> */}
+                </Box>
               </Box>
             </Flex>
+            {/* </Box> */}
             <div className="motion-modal__close-btn">
               <Button size="lg" style={{ padding: '8px 24px' }} onClick={close}>
                 {t('close')}

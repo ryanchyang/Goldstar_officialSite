@@ -140,8 +140,7 @@ export const locationData = {
   list: [
     {
       id: 'loc_1',
-      cover:
-        'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80',
+      cover: '/images/common/Arcadia-ca.jpg',
       title: 'great_location',
       desc: 'loc_1_desc',
       content: [
@@ -154,8 +153,7 @@ export const locationData = {
     },
     {
       id: 'loc_2',
-      cover:
-        'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80',
+      cover: '/images/common/maxresdefault.jpg',
       title: 'nice_school',
       desc: 'loc_2_desc',
       content: [
@@ -214,6 +212,23 @@ export const locationData = {
         'loc_6_li_8',
         'loc_6_li_9',
       ],
+    },
+  ],
+}
+
+export const noticeData = {
+  text: {
+    title: 'notice_title',
+    desc: 'notice_desc',
+  },
+  list: [
+    {
+      id: 'notice_1',
+      cover:
+        'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80',
+      title: 'notice_1_title',
+      desc: 'notice_1_desc',
+      content: ['notice_1_content'],
     },
   ],
 }

@@ -153,7 +153,7 @@ export const locationData = {
     },
     {
       id: 'loc_2',
-      cover: '/images/common/maxresdefault.jpg',
+      cover: '/images/common/arcadia-high-school-arcadia-ca.jpg',
       title: 'nice_school',
       desc: 'loc_2_desc',
       content: [
@@ -166,16 +166,14 @@ export const locationData = {
     },
     {
       id: 'loc_3',
-      cover:
-        'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80',
+      cover: '/images/common/genMid.WS23115300_0.jpg',
       title: 'housing',
       desc: 'loc_3_desc',
       content: ['loc_3_li_1', 'loc_3_li_2', 'loc_3_li_3', 'loc_3_li_4'],
     },
     {
       id: 'loc_4',
-      cover:
-        'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80',
+      cover: '/images/common/15294301478_b83e5e221d_o.webp',
       title: 'nature',
       desc: 'loc_4_desc',
       content: [
@@ -189,16 +187,14 @@ export const locationData = {
     },
     {
       id: 'loc_5',
-      cover:
-        'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80',
+      cover: '/images/common/Santa-Anita-starting-gate.png',
       title: 'attraction',
       desc: 'loc_5_desc',
       content: ['loc_5_li_1', 'loc_5_li_2', 'loc_5_li_3', 'loc_5_li_4'],
     },
     {
       id: 'loc_6',
-      cover:
-        'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80',
+      cover: '/images/common/disney.jpg',
       title: 'mall',
       desc: 'loc_6_desc',
       content: [

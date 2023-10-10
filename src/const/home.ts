@@ -224,11 +224,10 @@ export const noticeData = {
   list: [
     {
       id: 'notice_1',
-      cover:
-        'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80',
+      cover: '/images/common/IMG_3821.jpg',
       title: 'notice_1_title',
       desc: 'notice_1_desc',
-      content: ['notice_1_content'],
+      content: ['notice_1_li_1_a'],
     },
   ],
 }

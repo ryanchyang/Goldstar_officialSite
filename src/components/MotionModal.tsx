@@ -6,7 +6,7 @@ import { useEffect } from 'react'
 import { PiStarFourBold } from 'react-icons/pi'
 
 import { Button } from '@/theme/chakra'
-import { Box, Flex, List, ListIcon, ListItem, Text } from '@/theme/chakra'
+import { Box, Flex, Link, List, ListIcon, ListItem, Text } from '@/theme/chakra'
 
 import styles from './MotionModal.module.css'
 
@@ -84,7 +84,13 @@ function MotionModal({ isOpen, close, data }: MotionModalProp) {
                     {data.content.map(item => (
                       <ListItem key={item} fontSize={{ base: 'sm', lg: 'md' }}>
                         <ListIcon as={PiStarFourBold} color="brand.gold" />
-                        {t(item)}
+                        {item.slice(-1) === 'a' ? (
+                          <Link isExternal href={t(item)}>
+                            {t(item)}
+                          </Link>
+                        ) : (
+                          t(item)
+                        )}
                       </ListItem>
                     ))}
                   </List>

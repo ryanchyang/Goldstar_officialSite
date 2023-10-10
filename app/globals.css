@@ -23,7 +23,6 @@ body.motion-modal-open {
   border-radius: 30px;
   background-color: white;
   overflow: hidden;
-  /* overflow: hidden; */
 }
 
 .motion-modal__close-btn {
@@ -31,7 +30,8 @@ body.motion-modal-open {
   z-index: 4;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 130%);
+  opacity: 0;
+  transform: translate(-50%, 300%);
 }
 
 .motion-modal-mask {

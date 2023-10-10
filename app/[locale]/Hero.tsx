@@ -70,7 +70,7 @@ function Hero() {
                 zIndex={3}
                 w="full"
                 height="full"
-                background="linear-gradient(0deg, rgba(10, 49, 97, 0.50) 0%, rgba(10, 49, 97, 0.50) 100%)"
+                background="linear-gradient(0deg, rgba(10, 49, 97, 0.60) 0%, rgba(10, 49, 97, 0.10) 100%)"
               ></Box>
               <Image
                 src={item.imgUrl}
@@ -79,6 +79,7 @@ function Hero() {
                 style={{
                   objectFit: 'cover', // cover, contain, none
                 }}
+                quality={100}
                 priority={item.id === 'hero-1' ? true : false}
               />
               <VStack

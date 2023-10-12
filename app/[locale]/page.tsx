@@ -19,7 +19,7 @@ export default function Home() {
       <Hero />
       <Strength />
       <Cost />
-      <Projection />
+      {/* <Projection /> */}
       {/* <Location /> */}
       <LocationHorizontal />
       {/* <PieChart /> */}

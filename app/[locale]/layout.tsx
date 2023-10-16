@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
 
+import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { Box } from '@/theme/chakra'
 
@@ -42,6 +43,7 @@ export default async function RootLayout({
             <Box minW={300}>
               <Header />
               {children}
+              <Footer />
             </Box>
           </Providers>
         </NextIntlClientProvider>

@@ -123,7 +123,8 @@
     "email": "Email",
     "message": "訊息",
     "placeholder_message": "輸入訊息",
-    "submit": "提交"
+    "submit": "提交",
+    "certificate": "註冊登記證號：C0318號"
   },
   "Eb3": {
     "hero_title": "EB-3 勞工移民 (非技術勞工類別)",

@@ -130,7 +130,7 @@ function Contact() {
   // methods.submitToGoogleForms(data)
 
   return (
-    <Container maxW={1200} pb={'150px'} id="contact">
+    <Container maxW={1200} pb={'100px'} id="contact">
       <Flex
         direction={{ base: 'column', lg: 'row' }}
         gap={{ base: 4, lg: 100 }}

@@ -123,7 +123,8 @@
     "email": "Email",
     "message": "訊息",
     "placeholder_message": "輸入訊息",
-    "submit": "提交"
+    "submit": "提交",
+    "certificate": "註冊登記證號：C0318號"
   },
   "Eb5": {
     "hero_title": "EB-5 簽證類別",

@@ -1,5 +1,6 @@
 import '../globals.css'
 
+import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { notFound } from 'next/navigation'
@@ -37,6 +38,9 @@ export default async function RootLayout({
   }
   return (
     <html lang={locale}>
+      {/* <Head>
+        <Script></Script>
+      </Head> */}
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Providers>
@@ -48,6 +52,7 @@ export default async function RootLayout({
           </Providers>
         </NextIntlClientProvider>
       </body>
+      <GoogleAnalytics gaId="G-96WKN0HJTL" />
     </html>
   )
 }

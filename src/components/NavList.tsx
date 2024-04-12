@@ -9,7 +9,7 @@ import { Link } from '@/theme/chakra'
 function NavList() {
   const currentRoute = usePathname()
   const params = useParams()
-  console.log({ currentRoute, params })
+  // console.log({ currentRoute, params })
   return (
     <>
       <HStack spacing="10">

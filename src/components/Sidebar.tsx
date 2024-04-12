@@ -47,11 +47,11 @@ function Sidebar() {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader>
-            <Box w={{ base: '100px', md: '163px' }}>
+            {/* <Box w={{ base: '100px', md: '163px' }}>
               <Link href={'/'}>
                 <Image src={'/images/common/logo_full.png'} alt="logo" />
               </Link>
-            </Box>
+            </Box> */}
           </DrawerHeader>
           <DrawerBody>
             <VStack spacing="5">

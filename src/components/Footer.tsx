@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import line from 'public/images/common/LINE_logo.png'
 import { FaMobileAlt } from 'react-icons/fa'
+import { FiPhone } from 'react-icons/fi'
 import { GoHome } from 'react-icons/go'
 import { HiOutlineMail } from 'react-icons/hi'
 import { MdEmail } from 'react-icons/md'
@@ -50,16 +51,17 @@ function Footer() {
             direction={{ base: 'column', lg: 'row' }}
             gap={{ base: 6, lg: 6 }}
           >
-            <Flex gap={2}>
-              <Box pos="relative" w={{ base: '40px', md: '40px' }}>
+            <Flex gap={2} align="center">
+              <Box
+                pos="relative"
+                w={{ base: '24px', md: '40px' }}
+                height={{ base: '24px', md: '40px' }}
+              >
                 <Image src={'/images/common/logo.png'} alt="logo" fill />
               </Box>
               <VStack align="flex-start" gap={0}>
                 <Box as="h4" fontSize={'16px'} fontFamily="heading">
-                  德寰國際有限公司
-                </Box>
-                <Box as="p" fontSize={'12px'} fontFamily="heading">
-                  Goldstar International Limited Company
+                  MP Global Consulting LLC
                 </Box>
               </VStack>
             </Flex>
@@ -71,19 +73,28 @@ function Footer() {
               <Flex align="center" gap={1}>
                 <HiOutlineMail fontSize={'18px'} />
                 <Box as="p" fontSize={{ base: '14px' }}>
-                  gsimmigration888@gmail.com
+                  carolhuang8@gmail.com
                 </Box>
               </Flex>
+
               <Flex align="center" gap={1}>
-                <GoHome fontSize={'18px'} />
+                <FiPhone fontSize={'18px'} />
                 <Box as="p" fontSize={{ base: '14px' }}>
-                  台北市復興北路179號5F
+                  626-445-8789
                 </Box>
               </Flex>
               <Flex align="center" gap={1}>
                 <FaMobileAlt fontSize={'18px'} />
                 <Box as="p" fontSize={{ base: '14px' }}>
-                  (02)2712-3579
+                  626-524-6537
+                </Box>
+              </Flex>
+              <Flex align="start" gap={1}>
+                <GoHome fontSize={'18px'} />
+                <Box as="p" fontSize={{ base: '14px' }}>
+                  25 E Huntington Dr.
+                  <br />
+                  Arcadia, CA 91107
                 </Box>
               </Flex>
             </SimpleGrid>
@@ -96,9 +107,9 @@ function Footer() {
             direction={{ base: 'column', lg: 'row' }}
             gap={{ base: 6, lg: 6 }}
           >
-            <Box as="p" fontSize={{ base: '14px' }}>
+            {/* <Box as="p" fontSize={{ base: '14px' }}>
               {t('certificate')}
-            </Box>
+            </Box> */}
             <HStack spacing={{ base: 4 }}>
               <Link isExternal href="https://line.me/en/">
                 <Box

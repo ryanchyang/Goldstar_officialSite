@@ -46,11 +46,18 @@ function Header() {
       >
         <Flex justify="space-between" align="center">
           <HStack spacing="3">
-            <Box w={{ base: '100px', md: '163px' }}>
-              <Link href={'/'}>
+            <Link href={'/'}>
+              <Text
+                fontSize={{ base: 'md', lg: 'xl' }}
+                fontWeight="bold"
+                color="brand.blue"
+              >
+                MP Global Consulting LLC
+              </Text>
+              {/* <Link href={'/'}>
                 <Image src={'/images/common/logo_full.png'} alt="logo" />
-              </Link>
-            </Box>
+              </Link> */}
+            </Link>
             {/* <Text fontSize={{ base: 'md', md: '2xl' }} fontWeight="medium">
               Gold Star
             </Text> */}

@@ -41,7 +41,9 @@ function Fee() {
       </Box>
       <TableContainer borderRadius={20} boxShadow="md">
         <Table variant="simple" size={{ base: 'md', lg: 'lg' }}>
-          <TableCaption>Imperial to metric conversion factors</TableCaption>
+          <TableCaption>
+            上述費用僅供參考。實際申請費用講將以遞交申請時，移民局/國家簽證中心網站上發表的申請費用為準。
+          </TableCaption>
           <Thead bg="brand.blue">
             <Tr>
               <Th color="white">{t('fee_type')}</Th>

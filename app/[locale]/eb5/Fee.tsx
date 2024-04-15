@@ -83,12 +83,12 @@ function Fee() {
               <Td>{t('I526FeeAmount')}</Td>
               <Td>{t('I526FeeDue')}</Td>
             </Tr>
-            <Tr>
+            {/* <Tr>
               <Td>{t('IntegrityFundFee')}</Td>
               <Td>{t('USCIS')}</Td>
               <Td>{t('IntegrityFundFeeAmount')}</Td>
               <Td>{t('IntegrityFundFeeDue')}</Td>
-            </Tr>
+            </Tr> */}
             <Tr>
               <Td>{t('I485Fee')}</Td>
               <Td>{t('USCIS')}</Td>
